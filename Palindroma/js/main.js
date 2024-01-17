@@ -1,9 +1,9 @@
-const userString = prompt("Inserisci una stringa: ").toLowerCase();
+let userString = prompt("Inserisci una stringa: ").toLowerCase();
 
-// while (typeof userString != "string") {
-//   alert("La stringa inserita non è corretta. Riprova");
-//   const userString = prompt("Inserisci una stringa: ");
-// }
+while (!isNaN(userString)) {
+  alert("La stringa inserita non è corretta. Riprova");
+  userString = prompt("Inserisci una stringa: ");
+}
 
 const userStringRev = reverseString(userString);
 if (userString == userStringRev) {
